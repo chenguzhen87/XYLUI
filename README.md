@@ -1,4 +1,4 @@
-<<<<<<< 0f0947c665d0c931801b69c568a040d09174d6e5
+
 # 56new
 =======
 English | [简体中文](./README.zh-CN.md) | [Русский](./README.ru-RU.md)
@@ -125,4 +125,4 @@ Any type of contribution is welcome, here are some examples of how you may contr
 - Use Ant Design Pro in your daily work.
 - Submit [issues](http://github.com/ant-design/ant-design-pro/issues) to report bugs or ask questions.
 - Propose [pull requests](http://github.com/ant-design/ant-design-pro/pulls) to improve our code.
->>>>>>> '10/14修改'
+
