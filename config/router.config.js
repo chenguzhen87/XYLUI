@@ -23,6 +23,7 @@ export default [
         path: '/home',
         name: 'home',
         icon: 'home',
+        component: './Home/Home',
       },
       // 客户
       {
