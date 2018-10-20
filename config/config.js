@@ -95,7 +95,7 @@ export default {
     },
   },
   manifest: {
-    name: 'ant-design-pro',
+    name: '新集运智能系统',
     background_color: '#FFF',
     description: 'An out-of-box UI solution for enterprise applications as a React boilerplate.',
     display: 'standalone',
