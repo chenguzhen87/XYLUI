@@ -40,7 +40,7 @@ export default [
           },
           // 客户管理
           {
-            path: '/customer/customerManagement;',
+            path: '/customer/customerManagement',
             name: 'customerManagement',
             icon: 'user-add',
             component: './Customer/CustomerManagement',
