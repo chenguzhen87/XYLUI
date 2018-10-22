@@ -14,7 +14,7 @@ import Authorized from '@/utils/Authorized';
 import SettingDrawer from '@/components/SettingDrawer';
 import logo from '../../public/favicon.png';
 // import Footer from './Footer';
-import Header from './Header';
+// import Header from './Header';
 import Context from './MenuContext';
 import Exception403 from '../pages/Exception/403';
 
@@ -249,18 +249,18 @@ class BasicLayout extends React.PureComponent {
         )}
         <Layout
           style={{
-            ...this.getLayoutStyle(),
+            marginLeft: '80px',
             minHeight: '100vh',
           }}
         >
-          <Header
+          {/* <Header
             menuData={menuData}
             handleMenuCollapse={this.handleMenuCollapse}
             logo={logo}
             isMobile={isMobile}
             {...this.props}
-          />
-          <Content style={this.getContentStyle()}>
+          /> */}
+          <Content style={{ margin: '10px' }}>
             <Authorized
               authority={routerConfig && routerConfig.authority}
               noMatch={<Exception403 />}
