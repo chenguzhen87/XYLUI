@@ -18,14 +18,14 @@ class BusinessValuation extends Component {
         <Row gutter={10} style={{ marginTop: 10 }}>
           <Col {...colResponsiveProps}>
             <div>
-              <Card title="行业分布图" bodyStyle={{ height: '300px' }} />
+              <Card title="行业分布图" hoverable bodyStyle={{ height: '300px' }} />
             </div>
             <div style={{ marginTop: 10 }}>
-              <Card title="船公司分布图" bodyStyle={{ height: '300px' }} />
+              <Card title="船公司分布图" hoverable bodyStyle={{ height: '300px' }} />
             </div>
           </Col>
           <Col {...colResponsiveProps}>
-            <Card title="航线分布图" bodyStyle={{ height: '670px' }} />
+            <Card title="航线分布图" hoverable bodyStyle={{ height: '670px' }} />
           </Col>
         </Row>
       </div>

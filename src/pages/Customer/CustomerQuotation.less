@@ -1,18 +1,31 @@
-.quotation {
-  display: flex;
-  .quotationLeft {
-    width: 380px;
-    padding: 10px;
-    box-sizing: border-box;
+@import '~antd/lib/style/themes/default.less';
+
+.customerQuotation {
+  background: #fff;
+  .header {
+    height: 55px;
+    border-bottom: 1px solid @border-color-base;
+  }
+  .content {
+    background: #f0f2f5;
+    display: flex;
+  }
+  .content .left {
+    width: 417px;
     background: #fff;
-    position: fixed;
-    bottom: 0;
-    top: 0;
+    height: calc(100vh - 140px);
   }
 
-  .quotationRight {
-    flex: 1;
-    box-sizing: border-box;
-    margin-left: 390px;
+  .content .center {
+    width: 350px;
+    background: #fff;
+    margin: 0 10px;
+    height: calc(100vh - 140px);
+  }
+
+  .content .right {
+    width: 668px;
+    background: #fff;
+    height: calc(100vh - 140px);
   }
 }
