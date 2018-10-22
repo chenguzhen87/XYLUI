@@ -11,7 +11,7 @@ import { enquireScreen, unenquireScreen } from 'enquire-js';
 import { formatMessage } from 'umi/locale';
 import SiderMenu from '@/components/SiderMenu';
 import Authorized from '@/utils/Authorized';
-import SettingDrawer from '@/components/SettingDrawer';
+// import SettingDrawer from '@/components/SettingDrawer';
 import logo from '../../public/favicon.png';
 // import Footer from './Footer';
 // import Header from './Header';
@@ -89,7 +89,7 @@ class BasicLayout extends React.PureComponent {
   }
 
   state = {
-    rendering: true,
+    // rendering: true,
     isMobile: false,
     menuData: this.getMenuData(),
   };
@@ -102,11 +102,11 @@ class BasicLayout extends React.PureComponent {
     dispatch({
       type: 'setting/getSetting',
     });
-    this.renderRef = requestAnimationFrame(() => {
-      this.setState({
-        rendering: false,
-      });
-    });
+    // this.renderRef = requestAnimationFrame(() => {
+    //   this.setState({
+    //     rendering: false,
+    //   });
+    // });
     this.enquireHandler = enquireScreen(mobile => {
       const { isMobile } = this.state;
       if (isMobile !== mobile) {
@@ -178,33 +178,33 @@ class BasicLayout extends React.PureComponent {
     const currRouterData = this.matchParamsPath(pathname);
 
     if (!currRouterData) {
-      return '56new';
+      return 'XYLUI';
     }
     const message = formatMessage({
       id: currRouterData.locale || currRouterData.name,
       defaultMessage: currRouterData.name,
     });
-    return `${message} - 56new`;
+    return `${message} - XYLUI`;
   };
 
-  getLayoutStyle = () => {
-    const { isMobile } = this.state;
-    const { fixSiderbar, collapsed, layout } = this.props;
-    if (fixSiderbar && layout !== 'topmenu' && !isMobile) {
-      return {
-        paddingLeft: collapsed ? '80px' : '256px',
-      };
-    }
-    return null;
-  };
+  // getLayoutStyle = () => {
+  //   const { isMobile } = this.state;
+  //   const { fixSiderbar, collapsed, layout } = this.props;
+  //   if (fixSiderbar && layout !== 'topmenu' && !isMobile) {
+  //     return {
+  //       paddingLeft: collapsed ? '80px' : '256px',
+  //     };
+  //   }
+  //   return null;
+  // };
 
-  getContentStyle = () => {
-    const { fixedHeader } = this.props;
-    return {
-      margin: '10px',
-      paddingTop: fixedHeader ? 64 : 0,
-    };
-  };
+  // getContentStyle = () => {
+  //   const { fixedHeader } = this.props;
+  //   return {
+  //     margin: '10px',
+  //     paddingTop: fixedHeader ? 64 : 0,
+  //   };
+  // };
 
   handleMenuCollapse = collapsed => {
     const { dispatch } = this.props;
@@ -214,15 +214,15 @@ class BasicLayout extends React.PureComponent {
     });
   };
 
-  renderSettingDrawer() {
-    // Do not render SettingDrawer in production
-    // unless it is deployed in preview.pro.ant.design as demo
-    const { rendering } = this.state;
-    if ((rendering || process.env.NODE_ENV === 'production') && APP_TYPE !== 'site') {
-      return null;
-    }
-    return <SettingDrawer />;
-  }
+  // renderSettingDrawer() {
+  //   // Do not render SettingDrawer in production
+  //   // unless it is deployed in preview.pro.ant.design as demo
+  //   const { rendering } = this.state;
+  //   if ((rendering || process.env.NODE_ENV === 'production') && APP_TYPE !== 'site') {
+  //     return null;
+  //   }
+  //   return <SettingDrawer />;
+  // }
 
   render() {
     const {
@@ -283,7 +283,7 @@ class BasicLayout extends React.PureComponent {
             )}
           </ContainerQuery>
         </DocumentTitle>
-        {this.renderSettingDrawer()}
+        {/* {this.renderSettingDrawer()} */}
       </React.Fragment>
     );
   }
