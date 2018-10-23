@@ -62,11 +62,17 @@ export default {
   },
   // proxy: {
   //   '/server/api/': {
-  //     target: 'https://preview.pro.ant.design/',
+  //     target: 'http://preview.pro.ant.design/',
   //     changeOrigin: true,
   //     pathRewrite: { '^/server': '' },
   //   },
   // },
+  proxy: {
+    '/XYLMis/': {
+      target: 'http://new.56xyl.com:8810/',
+      changeOrigin: true,
+    },
+  },
   ignoreMomentLocale: true,
   lessLoaderOptions: {
     javascriptEnabled: true,

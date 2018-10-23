@@ -94,11 +94,20 @@ class BasicLayout extends React.PureComponent {
     menuData: this.getMenuData(),
   };
 
+  componentWillMount() {
+    const { dispatch, history } = this.props;
+    if (window.sessionStorage.getItem('loginInfo')) {
+      let loginInfo = window.localStorage.getItem('loginInfo');
+      loginInfo = JSON.parse(loginInfo);
+      dispatch({ type: 'login/save', data: loginInfo });
+      history.push('/home');
+    } else {
+      history.push('/user/login');
+    }
+  }
+
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch({
-      type: 'user/fetchCurrent',
-    });
     dispatch({
       type: 'setting/getSetting',
     });
