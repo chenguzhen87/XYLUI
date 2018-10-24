@@ -2,7 +2,7 @@
  * @Author: icony 
  * @Date: 2018-10-19 10:56:52 
  * @Last Modified by: icony
- * @Last Modified time: 2018-10-19 19:31:17
+ * @Last Modified time: 2018-10-22 14:27:59
  */
 
 import React from 'react';
@@ -15,7 +15,7 @@ export default function() {
     sm: 8,
   };
   return (
-    <Card bodyStyle={{ padding: 0 }}>
+    <Card hoverable bodyStyle={{ padding: 0 }}>
       <Row>
         <Col {...colResponsiveProps}>
           <div className={styles.customerStas}>

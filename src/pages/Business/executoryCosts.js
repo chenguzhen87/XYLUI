@@ -20,7 +20,11 @@ class ExecutoryCosts extends Component {
             </div>
           </TabPane>
           <TabPane tab="派车" key="2">
-            111
+            <div className={styles.costsContent}>
+              <div className={styles.left}>1111</div>
+              <div className={styles.center}>2222</div>
+              <div className={styles.right}>3333</div>
+            </div>
           </TabPane>
         </Tabs>
       </div>

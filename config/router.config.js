@@ -1,24 +1,18 @@
 export default [
   // user
   {
-    path: '/user',
-    component: '../layouts/UserLayout',
-    routes: [
-      { path: '/user', redirect: '/user/login' },
-      { path: '/user/login', component: './User/Login' },
-      { path: '/user/register', component: './User/Register' },
-      { path: '/user/register-result', component: './User/RegisterResult' },
-    ],
+    path: '/user/login',
+    component: './User/Login',
   },
 
   {
     path: '/',
     component: '../layouts/BasicLayout',
-    Routes: ['src/pages/Authorized'],
-    authority: ['admin', 'user'],
+    // Routes: ['src/pages/Authorized'],
+    // authority: ['admin', 'user'],
     routes: [
       // 主页
-      { path: '/', redirect: '/home' },
+      // { path: '/', redirect: '/home' },
       {
         path: '/home',
         name: 'home',
@@ -40,7 +34,7 @@ export default [
           },
           // 客户管理
           {
-            path: '/customer/customerManagement;',
+            path: '/customer/customerManagement',
             name: 'customerManagement',
             icon: 'user-add',
             component: './Customer/CustomerManagement',

@@ -1,28 +1,32 @@
 .executoryCosts {
-  .ant-tabs-bar {
-    background: #fff;
+  background: #fff;
+  :global {
+    .ant-tabs-bar {
+      margin: 0;
+    }
   }
 
   .costsContent {
     display: flex;
+    background: #f0f2f5;
   }
 
   .costsContent .left {
     flex: 1;
-    background: #b87575;
-    height: calc(100vh - 145px);
+    background: #fff;
+    height: calc(100vh - 130px);
   }
 
   .costsContent .center {
     width: 300px;
     background: #fff;
     margin: 0 10px;
-    height: calc(100vh - 145px);
+    height: calc(100vh - 130px);
   }
 
   .costsContent .right {
     width: 380px;
     background: #fff;
-    height: calc(100vh - 145px);
+    height: calc(100vh - 130px);
   }
 }
