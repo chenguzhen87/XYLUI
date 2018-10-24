@@ -1,5 +1,4 @@
 import React from 'react';
-import { Drawer } from 'antd';
 import SiderMenu from './SiderMenu';
 
 /**
@@ -8,7 +7,7 @@ import SiderMenu from './SiderMenu';
  * @param  menus
  */
 const getFlatMenuKeys = menuData => {
-  let keys = [];
+  let keys = []; // 路由路径数组
   menuData.forEach(item => {
     if (item.children) {
       keys = keys.concat(getFlatMenuKeys(item.children));
@@ -19,26 +18,8 @@ const getFlatMenuKeys = menuData => {
 };
 
 const SiderMenuWrapper = props => {
-  const { isMobile, menuData, collapsed, onCollapse } = props;
-  return isMobile ? (
-    <Drawer
-      visible={!collapsed}
-      placement="left"
-      onClose={() => onCollapse(true)}
-      style={{
-        padding: 0,
-        height: '100vh',
-      }}
-    >
-      <SiderMenu
-        {...props}
-        flatMenuKeys={getFlatMenuKeys(menuData)}
-        collapsed={isMobile ? false : collapsed}
-      />
-    </Drawer>
-  ) : (
-    <SiderMenu {...props} flatMenuKeys={getFlatMenuKeys(menuData)} />
-  );
+  const { menuData } = props;
+  return <SiderMenu {...props} flatMenuKeys={getFlatMenuKeys(menuData)} />;
 };
 
 export default SiderMenuWrapper;

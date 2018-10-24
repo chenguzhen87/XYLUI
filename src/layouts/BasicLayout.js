@@ -96,9 +96,9 @@ class BasicLayout extends React.PureComponent {
 
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch({
-      type: 'user/fetchCurrent',
-    });
+    // dispatch({
+    //   type: 'user/fetchCurrent',
+    // });
     dispatch({
       type: 'setting/getSetting',
     });
@@ -129,7 +129,7 @@ class BasicLayout extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    cancelAnimationFrame(this.renderRef);
+    // cancelAnimationFrame(this.renderRef);
     unenquireScreen(this.enquireHandler);
   }
 
